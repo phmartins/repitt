@@ -1,0 +1,17 @@
+{
+  "name": "Repitt",
+  "short_name": "Repitt",
+  "description": "Fidelização simples para relações que continuam.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#8409D5",
+  "icons": [
+    {
+      "src": "/assets/repitt-symbol-violet.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

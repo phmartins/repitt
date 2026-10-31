@@ -1,0 +1,146 @@
+export const routes = [
+  ["/", "home"],
+  ["/produto/", "produto"],
+  ["/como-funciona/", "como-funciona"],
+  ["/funcionalidades/", "funcionalidades"],
+  ["/funcionalidades/comprovante-inteligente/", "comprovante"],
+  ["/solucoes/", "solucoes"],
+  ["/solucoes/cafeterias/", "cafeterias"],
+  ["/solucoes/varejo/", "varejo"],
+  ["/solucoes/servicos/", "servicos"],
+  ["/para-estabelecimentos/", "estabelecimentos"],
+  ["/planos/", "planos"],
+  ["/empresa/", "empresa"],
+  ["/perguntas-frequentes/", "faq"],
+  ["/contato/", "contato"],
+  ["/privacidade/", "privacidade"],
+  ["/termos/", "termos"],
+  ["/cookies/", "cookies"]
+];
+
+export const pages = {
+  home: {
+    title: "Repitt — Fidelização que dá motivos para voltar",
+    description: "A Repitt conecta estabelecimentos e consumidores em experiências de fidelização simples, claras e contínuas.",
+    body: `
+      <section class="hero section" aria-labelledby="hero-title">
+        <div class="container hero-copy">
+          <span class="eyebrow">Fidelização para negócios que valorizam relações</span>
+          <h1 id="hero-title">Transforme compras em <em>relacionamentos.</em></h1>
+          <p class="hero-lead">A Repitt ajuda estabelecimentos a criar motivos para seus clientes voltarem — com uma experiência simples para quem vende e para quem compra.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="/como-funciona/">Ver como funciona <span aria-hidden="true">↗</span></a>
+            <a class="button button-ghost" href="/produto/">Conhecer o produto</a>
+          </div>
+          <p class="microcopy">Conheça a experiência antes de escolher como começar.</p>
+        </div>
+        <div class="container product-stage" aria-label="Demonstração ilustrativa da plataforma Repitt">
+          <div class="dashboard-shell">
+            <div class="browser-bar"><i></i><i></i><i></i><span>Painel do estabelecimento · exemplo demonstrativo</span></div>
+            <div class="dashboard-grid">
+              <aside class="demo-sidebar">
+                <img src="/assets/repitt-symbol-violet.png" alt="" width="34" height="34">
+                <span class="active">Visão geral</span><span>Programas</span><span>Participantes</span><span>Recompensas</span><span>Movimentações</span>
+              </aside>
+              <div class="demo-main">
+                <div class="demo-heading"><div><small>Programa demonstrativo</small><h2>Clube da casa</h2></div><span class="status-dot">Ativo</span></div>
+                <div class="metric-row"><article><small>Participações</small><strong>128</strong><span>exemplo</span></article><article><small>Benefícios disponíveis</small><strong>24</strong><span>exemplo</span></article><article><small>Resgates registrados</small><strong>17</strong><span>exemplo</span></article></div>
+                <div class="activity-card"><div class="chart-head"><div><small>Atividade</small><strong>Últimos 7 dias</strong></div><span>Dados fictícios</span></div><div class="bar-chart" aria-hidden="true"><i style="--h:36%"></i><i style="--h:58%"></i><i style="--h:44%"></i><i style="--h:72%"></i><i style="--h:53%"></i><i style="--h:84%"></i><i style="--h:66%"></i></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="phone-shell" aria-label="Exemplo demonstrativo da experiência do consumidor">
+            <div class="phone-notch"></div><span class="phone-label">Minha experiência</span><div class="phone-brand"><img src="/assets/repitt-symbol-violet.png" alt="" width="44" height="44"><div><small>Cafeteria exemplo</small><strong>Seu progresso</strong></div></div>
+            <div class="progress-ring"><span><strong>6</strong><small>de 10 visitas</small></span></div><p>Mais quatro participações para alcançar o benefício de exemplo.</p><button type="button" class="mini-button" data-demo-toast>Ver regras</button>
+          </div>
+          <div class="reward-pop"><span aria-hidden="true">✦</span><div><small>Exemplo de benefício</small><strong>Progresso atualizado</strong></div></div>
+        </div>
+      </section>
+
+      <section class="context-strip" aria-label="Contextos de uso"><div class="container"><p>Feita para a rotina de</p><div><span>Cafeterias</span><span>Varejo</span><span>Beleza</span><span>Serviços</span><span>Alimentação</span></div></div></section>
+
+      <section class="section manifesto"><div class="container editorial-grid"><span class="section-index">01 / RELACIONAMENTO</span><div><h2>O cliente não precisa de mais uma promoção. Precisa de um bom motivo para voltar.</h2><p>A Repitt organiza a experiência de fidelização para que cada participação tenha regra clara, acompanhamento simples e benefício compreensível.</p></div></div></section>
+
+      <section class="section benefits"><div class="container"><div class="section-heading"><span class="eyebrow">Valor no dia a dia</span><h2>Menos esforço para operar. Mais clareza para participar.</h2></div><div class="benefit-composition">
+        <article class="feature-large"><span class="feature-number">01</span><h3>Crie motivos para uma nova visita</h3><p>Estruture uma ação de fidelização e deixe as regras visíveis para sua equipe e seus clientes.</p><div class="loyalty-ticket"><small>PROGRAMA DEMONSTRATIVO</small><strong>Complete sua jornada</strong><div class="stamp-row"><i>✓</i><i>✓</i><i>✓</i><i>4</i><i>5</i></div></div></article>
+        <article class="feature-slim"><span class="feature-number">02</span><h3>Benefícios fáceis de entender</h3><p>Progresso, regras e próximos passos em uma experiência direta.</p></article>
+        <article class="feature-slim dark"><span class="feature-number">03</span><h3>Uma visão organizada</h3><p>Acompanhe programas e movimentações quando esses módulos estiverem habilitados.</p></article>
+      </div></div></section>
+
+      <section class="section how-section" id="como-funciona"><div class="container"><div class="section-heading centered"><span class="eyebrow">Como funciona</span><h2>Uma jornada conectada de ponta a ponta.</h2><p>Três etapas simples, com papéis claros para o estabelecimento e o consumidor.</p></div><ol class="steps">
+        <li><span>1</span><div><small>ESTABELECIMENTO</small><h3>Configure a ação</h3><p>Defina regras e benefícios conforme a operação aprovada do seu programa.</p></div></li>
+        <li><span>2</span><div><small>CONSUMIDOR</small><h3>Participe e acompanhe</h3><p>Veja o progresso e as condições da experiência de forma transparente.</p></div></li>
+        <li><span>3</span><div><small>RELACIONAMENTO</small><h3>Continue a conversa</h3><p>Registre ações elegíveis e crie novas oportunidades de retorno.</p></div></li>
+      </ol><div class="center-action"><a class="text-link" href="/como-funciona/">Explorar a jornada completa <span>→</span></a></div></div></section>
+
+      <section class="section showcase-dark"><div class="container split"><div class="showcase-copy"><span class="eyebrow light">Para o estabelecimento</span><h2>Controle sem transformar a rotina em uma planilha infinita.</h2><p>Programas, participantes, recompensas e movimentações apresentados em uma interface organizada, com exemplos claramente identificados.</p><ul class="check-list"><li>Regras visíveis e editáveis</li><li>Histórico de movimentações</li><li>Estados e permissões compreensíveis</li></ul><a class="button button-aqua" href="/para-estabelecimentos/">Ver experiência empresarial</a></div><div class="dashboard-detail"><div class="detail-top"><span>Programa de fidelização</span><b>Exemplo</b></div><h3>Volte sempre</h3><div class="rule-row"><i>01</i><div><strong>Regra de participação</strong><small>Configurável conforme a operação</small></div><span>Editar</span></div><div class="rule-row"><i>02</i><div><strong>Benefício de exemplo</strong><small>Condição claramente informada</small></div><span>Ver</span></div><div class="rule-row"><i>03</i><div><strong>Validação</strong><small>Manual ou automatizada, se habilitada</small></div><span>Revisar</span></div></div></div></section>
+
+      <section class="section consumer-section"><div class="container split reverse"><div class="consumer-visual"><div class="mini-phone left"><span>Benefícios</span><strong>2 disponíveis</strong><div class="coupon">EXEMPLO<br><b>Vantagem liberada</b></div></div><div class="mini-phone right"><span>Histórico</span><div class="history-line"><i></i><p><b>Participação registrada</b><small>Hoje · exemplo</small></p></div><div class="history-line"><i></i><p><b>Progresso atualizado</b><small>Ontem · exemplo</small></p></div></div></div><div class="showcase-copy"><span class="eyebrow">Para o consumidor</span><h2>Participar deve ser tão simples quanto entender o benefício.</h2><p>A experiência do cliente separa progresso, regras e histórico em uma jornada leve — sem confundir o site institucional com a área autenticada.</p><a class="text-link" href="/produto/">Conhecer as duas experiências <span>→</span></a></div></div></section>
+
+      <section class="section receipt-section"><div class="container"><div class="receipt-intro"><span class="eyebrow light">Diferencial Repitt</span><h2>Comprovante Inteligente</h2><p>Duas modalidades projetadas para registrar participações com critérios claros de elegibilidade, autenticidade e uso.</p></div><div class="receipt-demo" data-tabs><div class="tab-list" role="tablist" aria-label="Modalidades do Comprovante Inteligente"><button role="tab" aria-selected="true" data-tab="fiscal">Comprovante fiscal</button><button role="tab" aria-selected="false" data-tab="qr">QR Code do estabelecimento</button></div><div class="tab-panel" data-panel="fiscal"><div class="flow-card"><span>01</span><b>Envio</b><small>Documento elegível</small></div><i>→</i><div class="flow-card"><span>02</span><b>Análise</b><small>Automática ou manual</small></div><i>→</i><div class="flow-card approved"><span>03</span><b>Resultado</b><small>Após validação autorizada</small></div></div><div class="tab-panel" data-panel="qr" hidden><div class="flow-card"><span>01</span><b>Leitura</b><small>Código do estabelecimento</small></div><i>→</i><div class="flow-card"><span>02</span><b>Conferência</b><small>Validade e limite de uso</small></div><i>→</i><div class="flow-card approved"><span>03</span><b>Autorização</b><small>Operação aceita ou recusada</small></div></div><p class="demo-disclaimer">Fluxo demonstrativo. A disponibilidade depende dos módulos e integrações efetivamente habilitados.</p></div><div class="center-action"><a class="button button-light" href="/funcionalidades/comprovante-inteligente/">Entender o Comprovante Inteligente</a></div></div></section>
+
+      <section class="section demo-section"><div class="container split"><div class="showcase-copy"><span class="eyebrow">Demonstração ilustrativa</span><h2>Veja uma jornada de fidelização acontecer.</h2><p>Escolha um cenário e avance por uma participação fictícia. Nada aqui representa resultado garantido ou operação real.</p><div class="demo-notes"><span>Sem projeções comerciais</span><span>Dados totalmente fictícios</span></div></div><div class="journey-demo" data-journey><div class="journey-head"><label for="scenario">Cenário</label><select id="scenario"><option value="cafe">Cafeteria</option><option value="loja">Loja de bairro</option><option value="servico">Serviço recorrente</option></select></div><div class="journey-screen"><small>ETAPA <span data-journey-step>1</span> DE 3</small><h3 data-journey-title>Participação registrada</h3><p data-journey-text>Uma ação fictícia foi vinculada ao programa demonstrativo.</p><div class="journey-progress"><i></i><i></i><i></i></div></div><div class="journey-actions"><button class="button button-ghost" type="button" data-journey-back disabled>Voltar</button><button class="button button-primary" type="button" data-journey-next>Continuar</button></div></div></div></section>
+
+      <section class="section segments-section"><div class="container"><div class="section-heading"><span class="eyebrow">Soluções por contexto</span><h2>Fidelização muda de forma. A relação continua sendo o centro.</h2></div><div class="segment-grid"><a href="/solucoes/cafeterias/"><span>01</span><h3>Cafeterias</h3><p>Visitas frequentes e benefícios de fácil compreensão.</p><b>Explorar →</b></a><a href="/solucoes/varejo/"><span>02</span><h3>Varejo</h3><p>Programas compatíveis com ciclos variados de compra.</p><b>Explorar →</b></a><a href="/solucoes/servicos/"><span>03</span><h3>Serviços</h3><p>Relacionamento contínuo além do primeiro atendimento.</p><b>Explorar →</b></a></div></div></section>
+
+      <section class="section human-section"><div class="container human-card"><div class="human-copy"><span class="eyebrow light">Tecnologia a serviço da relação</span><h2>Fidelizar começa com uma experiência que faz sentido para pessoas.</h2><p>A Repitt foi pensada para aproximar quem oferece um bom serviço de quem tem vontade de voltar.</p><a class="button button-light" href="/empresa/">Conheça a Repitt</a></div><img src="/assets/cafe-loyalty.webp" alt="Cliente usando o celular durante atendimento em uma cafeteria" width="1600" height="800" loading="lazy"></div></section>
+
+      ${faqBlock()}
+      ${finalCta()}
+    `
+  },
+  produto: page("Produto", "Duas experiências. Uma relação contínua.", "A Repitt conecta a gestão do estabelecimento à participação do consumidor, mantendo cada papel claro.", productBlocks()),
+  "como-funciona": page("Como funciona", "Da configuração ao próximo retorno.", "Entenda a jornada proposta para estabelecimentos e consumidores, sem etapas escondidas ou promessas automáticas.", journeyBlocks()),
+  funcionalidades: page("Funcionalidades", "Recursos organizados pelo que resolvem.", "A disponibilidade pública de cada recurso depende da validação do produto. Esta página separa capacidades disponíveis, em validação e planejadas.", featuresBlocks()),
+  comprovante: page("Comprovante Inteligente", "Validação explicada, não prometida.", "Conheça as duas modalidades projetadas para registrar participações com critérios de segurança e elegibilidade.", receiptBlocks()),
+  solucoes: page("Soluções", "Um programa coerente com a rotina do seu negócio.", "Explore aplicações por contexto sem assumir integrações ou regras que ainda não foram confirmadas.", segmentsBlocks()),
+  cafeterias: segmentPage("Cafeterias", "Transforme uma pausa recorrente em uma relação reconhecida.", "Uma jornada simples para visitas frequentes, com progresso e regras visíveis."),
+  varejo: segmentPage("Varejo", "Dê continuidade à experiência depois da compra.", "Organize benefícios com ciclos de compra variados e comunicação clara."),
+  servicos: segmentPage("Serviços", "O relacionamento não termina no primeiro atendimento.", "Crie uma experiência que reconhece recorrência sem complicar a agenda da equipe."),
+  estabelecimentos: page("Para estabelecimentos", "Fidelização que cabe na operação.", "Configure, acompanhe e comunique programas com uma experiência organizada para a equipe.", merchantBlocks()),
+  planos: page("Planos", "Condições claras antes de escolher.", "Os preços e limites comerciais ainda dependem de aprovação. Nenhum valor fictício é publicado.", plansBlocks()),
+  empresa: page("Empresa", "A volta do cliente vale mais.", "A Repitt nasce para tornar a fidelização mais compreensível, humana e útil para pequenos e médios negócios.", companyBlocks()),
+  faq: page("Perguntas frequentes", "Respostas diretas para decisões reais.", "Reunimos o que já pode ser explicado com segurança e sinalizamos o que depende da configuração comercial.", fullFaq()),
+  contato: page("Contato", "Vamos entender seu contexto.", "O canal de recebimento ainda precisa ser configurado antes da publicação comercial.", contactBlocks()),
+  privacidade: legalPage("Privacidade", "Minuta informativa — revisão jurídica obrigatória", privacyCopy()),
+  termos: legalPage("Termos de Uso", "Minuta informativa — revisão jurídica obrigatória", termsCopy()),
+  cookies: legalPage("Cookies", "Preferências sob seu controle", cookiesCopy())
+};
+
+function page(label, headline, lead, content) {
+  return {
+    title: `${label} | Repitt`,
+    description: lead,
+    body: `<section class="inner-hero section"><div class="container"><span class="eyebrow">${label}</span><h1>${headline}</h1><p>${lead}</p></div></section>${content}${finalCta()}`
+  };
+}
+
+function legalPage(label, headline, content) {
+  return { title: `${label} | Repitt`, description: headline, body: `<section class="inner-hero compact section"><div class="container"><span class="eyebrow">${label}</span><h1>${headline}</h1><p>Este conteúdo é uma base de estrutura e precisa ser validado com os dados empresariais e o jurídico da Repitt antes da publicação definitiva.</p></div></section><section class="section legal"><div class="container reading">${content}</div></section>` };
+}
+
+function productBlocks() { return `<section class="section"><div class="container split"><div class="showcase-copy"><span class="eyebrow">Painel empresarial</span><h2>Onde a estratégia ganha forma.</h2><p>Uma visão dedicada à configuração de programas, participantes, benefícios e movimentações, conforme os módulos habilitados.</p><ul class="check-list dark-list"><li>Regras explícitas</li><li>Dados demonstrativos identificados</li><li>Estados de operação claros</li></ul></div><div class="product-board"><span>PAINEL · EXEMPLO</span><h3>Visão do programa</h3><div class="board-grid"><i></i><i></i><i></i><i></i></div></div></div></section><section class="section surface-mauve"><div class="container split reverse"><div class="phone-pair"><div class="simple-phone">Progresso<br><b>6 de 10</b></div><div class="simple-phone second">Benefícios<br><b>2 opções</b></div></div><div class="showcase-copy"><span class="eyebrow">Experiência do consumidor</span><h2>Clareza para acompanhar e participar.</h2><p>A área do consumidor mostra apenas o que é relevante para sua jornada, separada do painel e do site institucional.</p></div></div></section>`; }
+function journeyBlocks() { return `<section class="section"><div class="container timeline"><article><b>01</b><div><span>Configuração</span><h2>O estabelecimento define a ação.</h2><p>Regras, validade e benefício precisam ser entendidos antes da publicação.</p></div></article><article><b>02</b><div><span>Participação</span><h2>O consumidor realiza uma ação elegível.</h2><p>O método depende da modalidade habilitada e nunca deve ser presumido.</p></div></article><article><b>03</b><div><span>Validação</span><h2>A operação confere os critérios.</h2><p>Aprovação manual ou automatizada, quando disponível, precede qualquer benefício.</p></div></article><article><b>04</b><div><span>Continuidade</span><h2>A relação segue com transparência.</h2><p>Progresso, histórico e próximas oportunidades permanecem compreensíveis.</p></div></article></div></section>`; }
+function featuresBlocks() { return `<section class="section"><div class="container feature-groups"><article><span>01</span><div><h2>Fidelização e recompensas</h2><p>Pontos, catálogo, cupons, carteira e regras dependem da classificação final do produto.</p><b>Estado: em validação</b></div></article><article><span>02</span><div><h2>Engajamento</h2><p>Missões, níveis, conquistas e indicações fazem parte do escopo desejado, sem promessa pública de disponibilidade.</p><b>Estado: planejado</b></div></article><article><span>03</span><div><h2>Comprovantes e registro</h2><p>OCR, QR Code, elegibilidade, duplicidade e revisão manual são apresentados como modalidades projetadas.</p><b>Estado: em validação</b></div></article><article><span>04</span><div><h2>Gestão empresarial</h2><p>Clientes, campanhas, permissões, relatórios e histórico serão publicados conforme confirmação.</p><b>Estado: em validação</b></div></article></div></section>`; }
+function receiptBlocks() { return `<section class="section receipt-explain"><div class="container"><div class="mode-grid"><article><span>MODALIDADE A</span><h2>Comprovante fiscal</h2><p>O consumidor envia um documento elegível. A operação pode extrair informações e aplicar critérios de autenticidade, prazo e duplicidade quando a tecnologia estiver implementada.</p><ol><li>Documento recebido</li><li>Análise automática ou manual</li><li>Resultado comunicado</li><li>Benefício somente após autorização</li></ol></article><article><span>MODALIDADE B</span><h2>QR Code do estabelecimento</h2><p>Um código vinculado ao programa é lido e conferido quanto à validade, limite de uso e estabelecimento correto.</p><ol><li>Código apresentado</li><li>Validade conferida</li><li>Uso autorizado ou recusado</li><li>Resultado comunicado</li></ol></article></div><div class="integrity-note"><h3>Integridade antes da conveniência</h3><p>Duplicidade, fraude, expiração, alteração de valores, múltiplas tentativas, privacidade e estorno precisam fazer parte da operação real — não apenas da interface pública.</p></div></div></section>`; }
+function segmentsBlocks() { return `<section class="section"><div class="container segment-grid expanded"><a href="/solucoes/cafeterias/"><span>01</span><h2>Cafeterias</h2><p>Reconhecimento de visitas frequentes.</p><b>Explorar →</b></a><a href="/solucoes/varejo/"><span>02</span><h2>Varejo</h2><p>Ciclos variados e regras claras.</p><b>Explorar →</b></a><a href="/solucoes/servicos/"><span>03</span><h2>Serviços</h2><p>Continuidade depois do atendimento.</p><b>Explorar →</b></a></div></section>`; }
+function segmentPage(name, headline, lead) { return page(name, headline, lead, `<section class="section"><div class="container split"><div class="showcase-copy"><span class="eyebrow">Situação cotidiana</span><h2>Uma experiência reconhecível, sem promessas genéricas.</h2><p>${lead} As regras e meios de registro precisam refletir a operação real do estabelecimento.</p><a class="text-link" href="/como-funciona/">Entender a jornada <span>→</span></a></div><div class="scenario-card"><small>CENÁRIO DEMONSTRATIVO</small><h3>${name}</h3><div><span>Visita registrada</span><b>→</b><span>Critérios conferidos</span><b>→</b><span>Progresso comunicado</span></div></div></div></section>`); }
+function merchantBlocks() { return `<section class="section"><div class="container merchant-grid"><article><b>01</b><h2>Configure com clareza</h2><p>Defina condições que sua equipe e seus clientes consigam explicar.</p></article><article><b>02</b><h2>Opere com segurança</h2><p>Use estados e critérios visíveis para reduzir interpretações diferentes.</p></article><article><b>03</b><h2>Acompanhe o histórico</h2><p>Consulte movimentações conforme os módulos confirmados.</p></article></div></section>`; }
+function plansBlocks() { return `<section class="section"><div class="container"><div class="plan-pending"><span>TRANSPARÊNCIA COMERCIAL</span><h2>Planos e preços em definição.</h2><p>Antes de publicar esta página, a Repitt precisa aprovar valores, limites, condições de cobrança, impostos, cancelamento e eventuais períodos de teste.</p><a class="button button-ghost" href="/produto/">Conhecer o produto enquanto isso</a></div></div></section>`; }
+function companyBlocks() { return `<section class="section"><div class="container editorial-grid"><span class="section-index">NOSSO PROPÓSITO</span><div><h2>Tornar a fidelização mais simples para quem oferece e mais valiosa para quem volta.</h2><p>Sem biografia ou marcos inventados: a história institucional será ampliada quando houver informações oficiais aprovadas.</p></div></div></section><section class="section brand-signature"><div class="container"><img src="/assets/repitt-liquid.png" alt="Símbolo Repitt em acabamento especial" width="640" height="640" loading="lazy"><div><span>ASSINATURA REPITT</span><h2>Sua volta vale mais!</h2></div></div></section>`; }
+function contactBlocks() { return `<section class="section"><div class="container contact-grid"><div><h2>Conte um pouco sobre seu negócio.</h2><p>O formulário fica preparado para integração, mas não envia dados enquanto um endpoint oficial não for configurado.</p><div class="contact-status"><i></i><span>Canal comercial em configuração</span></div></div><form class="contact-form" data-contact novalidate><label>Nome<input name="name" autocomplete="name" required></label><label>E-mail profissional<input type="email" name="email" autocomplete="email" required></label><label>Negócio<input name="business" autocomplete="organization"></label><label>O que você quer entender?<textarea name="message" rows="5" required></textarea></label><label class="checkbox"><input type="checkbox" required><span>Concordo com o uso destes dados para retorno sobre minha solicitação.</span></label><button class="button button-primary" type="submit" disabled>Enviar solicitação</button><p class="form-note" role="status">Envio desabilitado até a conexão com o canal oficial.</p></form></div></section>`; }
+function fullFaq() { return `<section class="section"><div class="container reading"><div class="faq-list">${faqItems(true)}</div></div></section>`; }
+function faqBlock() { return `<section class="section faq-section"><div class="container faq-layout"><div><span class="eyebrow">Perguntas frequentes</span><h2>O que vale saber antes de começar.</h2><p>Respostas objetivas, sem esconder o que ainda depende da configuração do produto.</p><a class="text-link" href="/perguntas-frequentes/">Ver todas as perguntas <span>→</span></a></div><div class="faq-list">${faqItems(false)}</div></div></section>`; }
+function faqItems(all) { const items = [
+  ["O que é a Repitt?", "Uma plataforma de fidelização e relacionamento que conecta a gestão do estabelecimento à experiência do consumidor."],
+  ["Como o cliente participa?", "A forma de participação depende do módulo e da operação habilitados. O site não presume instalação de aplicativo, CPF, telefone ou integração específica."],
+  ["O Comprovante Inteligente libera pontos automaticamente?", "Não. Qualquer benefício depende dos critérios de elegibilidade e da validação autorizada, que pode incluir análise manual."],
+  ["A Repitt funciona para meu negócio?", "A aderência depende da frequência de compra, do tipo de relacionamento e da operação. As páginas de soluções mostram cenários, não garantias."],
+  ["Quais são os planos?", "Preços, limites e condições ainda precisam de aprovação comercial antes da publicação."],
+  ["Como os dados são tratados?", "A política final deve detalhar finalidades, bases legais, direitos e responsabilidades após a definição da operação e dos fornecedores."],
+  ["Preciso instalar algum equipamento?", "Isso depende do método de participação confirmado. Nenhum equipamento específico é exigido nesta apresentação institucional." ]
+]; return items.slice(0, all ? items.length : 4).map(([q,a],i)=>`<article class="faq-item"><h3><button aria-expanded="${i===0?'true':'false'}"><span>${q}</span><i aria-hidden="true">+</i></button></h3><div ${i===0?'':'hidden'}><p>${a}</p></div></article>`).join(""); }
+function finalCta() { return `<section class="section final-cta"><div class="container"><img src="/assets/repitt-symbol-violet.png" alt="" width="130" height="130"><span>REPITT</span><h2>Seu próximo cliente pode ser alguém que já comprou de você.</h2><p>Conheça uma forma mais clara de construir relações que continuam.</p><div><a class="button button-primary" href="/como-funciona/">Ver como funciona</a><a class="button button-ghost" href="/contato/">Falar sobre meu negócio</a></div><strong>SUA VOLTA VALE MAIS!</strong></div></section>`; }
+function privacyCopy(){ return `<h2>1. Escopo desta minuta</h2><p>Esta estrutura identifica categorias que precisam constar na política final: contatos comerciais, dados de consumidores, registros de fidelização e documentos enviados para validação.</p><h2>2. Informações necessárias</h2><p>Antes da publicação, devem ser definidos controlador, operador, encarregado, finalidades, bases legais, retenção, compartilhamentos, transferências e canais para direitos dos titulares.</p><h2>3. Direitos</h2><p>A versão final deve explicar como solicitar acesso, correção, eliminação, portabilidade, oposição e revisão de decisões, quando aplicáveis.</p>`; }
+function termsCopy(){ return `<h2>1. Identificação das partes</h2><p>A razão social, CNPJ, endereço e canais oficiais precisam ser adicionados antes desta minuta produzir efeitos.</p><h2>2. Uso da plataforma</h2><p>A versão final deve definir contas, responsabilidades, disponibilidade, pagamentos, propriedade intelectual, limitações e encerramento.</p><h2>3. Regras de fidelização</h2><p>O estabelecimento deverá comunicar critérios de participação, validade, elegibilidade e resgate de forma clara ao consumidor.</p>`; }
+function cookiesCopy(){ return `<h2>Cookies essenciais</h2><p>Preferências locais, como consentimento e redução de avisos repetidos, podem ser armazenadas para o funcionamento do site.</p><h2>Cookies opcionais</h2><p>Nenhum rastreador opcional deve ser carregado antes da escolha do visitante. A implementação atual não inclui ferramentas de marketing ou analytics.</p><h2>Como alterar</h2><p>Use o botão “Preferências de cookies” no rodapé para revisar a escolha armazenada neste navegador.</p>`; }
