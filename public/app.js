@@ -19,7 +19,10 @@
     document.querySelectorAll("[data-menu-button]").forEach(button => {
       if (button === except) return;
       button.setAttribute("aria-expanded", "false");
-      button.nextElementSibling.hidden = true;
+      const panel = button.nextElementSibling;
+      panel.classList.remove("is-open");
+      clearTimeout(panel.closeTimer);
+      panel.closeTimer = setTimeout(() => { panel.hidden = true; }, 180);
     });
   };
 
@@ -29,7 +32,15 @@
       const open = button.getAttribute("aria-expanded") === "true";
       closeMenus(button);
       button.setAttribute("aria-expanded", String(!open));
-      button.nextElementSibling.hidden = open;
+      const panel = button.nextElementSibling;
+      clearTimeout(panel.closeTimer);
+      if (!open) {
+        panel.hidden = false;
+        requestAnimationFrame(() => panel.classList.add("is-open"));
+      } else {
+        panel.classList.remove("is-open");
+        panel.closeTimer = setTimeout(() => { panel.hidden = true; }, 180);
+      }
     });
   });
   document.addEventListener("click", () => closeMenus());
@@ -57,6 +68,50 @@
       scrollTick = false;
     });
   }, { passive: true });
+
+  const revealSelectors = [
+    ".section-heading", ".editorial-grid > *", ".benefit-composition > *", ".steps > *",
+    ".split > *", ".segment-grid > *", ".merchant-grid > *", ".mode-grid > *",
+    ".timeline > *", ".feature-groups > *", ".faq-layout > *", ".contact-grid > *",
+    ".human-card", ".receipt-demo", ".journey-demo", ".plan-pending", ".brand-signature .container",
+    ".final-cta .container", ".inner-hero .container", ".hero-copy > *", ".product-stage"
+  ];
+  const revealItems = [...document.querySelectorAll(revealSelectors.join(","))];
+  revealItems.forEach((item, index) => {
+    item.classList.add("reveal-item");
+    item.style.setProperty("--reveal-order", String(index % 4));
+  });
+
+  if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      });
+    }, { rootMargin: "0px 0px -9%", threshold: 0.08 });
+    revealItems.forEach(item => revealObserver.observe(item));
+  } else {
+    revealItems.forEach(item => item.classList.add("is-visible"));
+  }
+
+  const motionElements = [...document.querySelectorAll(".dashboard-shell, .phone-shell, .loyalty-ticket, .mini-phone, .dashboard-detail")];
+  let motionTick = false;
+  const updateMotion = () => {
+    motionElements.forEach((element, index) => {
+      const rect = element.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > innerHeight) return;
+      const progress = (innerHeight - rect.top) / (innerHeight + rect.height);
+      element.style.setProperty("--scroll-shift", `${(progress - .5) * (index % 2 ? -18 : 18)}px`);
+    });
+    motionTick = false;
+  };
+  addEventListener("scroll", () => {
+    if (motionTick) return;
+    motionTick = true;
+    requestAnimationFrame(updateMotion);
+  }, { passive: true });
+  updateMotion();
 
   document.querySelectorAll(".faq-item button").forEach(button => {
     button.addEventListener("click", () => {
