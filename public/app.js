@@ -59,15 +59,34 @@
     body.classList.toggle("menu-open", !open);
   });
 
+  const brandImage = header?.querySelector(".brand img");
+  const lightLogo = "/assets/repitt-logo-menu.png";
+  const darkLogo = "/assets/repitt-logo-white.png";
+  const darkSurfaces = ".rp-hero,.rp-dark,.rp-receipt,.receipt-section,.showcase-dark,.brand-signature,.site-footer";
+  const updateHeader = () => {
+    const scrolled = scrollY > 26;
+    header?.classList.toggle("scrolled", scrolled);
+    if (!header) return;
+    const sampleY = Math.min(innerHeight - 1, Math.round(header.getBoundingClientRect().bottom + 3));
+    const onDark = scrolled && document.elementsFromPoint(innerWidth / 2, sampleY).some(element => element.closest?.(darkSurfaces));
+    header.classList.toggle("header-on-dark", onDark);
+    if (brandImage) {
+      const nextLogo = onDark ? darkLogo : lightLogo;
+      if (!brandImage.src.endsWith(nextLogo)) brandImage.src = nextLogo;
+    }
+  };
+
   let scrollTick = false;
   addEventListener("scroll", () => {
     if (scrollTick) return;
     scrollTick = true;
     requestAnimationFrame(() => {
-      header?.classList.toggle("scrolled", scrollY > 20);
+      updateHeader();
       scrollTick = false;
     });
   }, { passive: true });
+  addEventListener("resize", updateHeader, { passive: true });
+  updateHeader();
 
   const revealSelectors = [
     ".section-heading", ".editorial-grid > *", ".benefit-composition > *", ".steps > *",
